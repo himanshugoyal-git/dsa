@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#17211b" />
+    <title>AlgoTrail - Learn DSA by Doing</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#" aria-label="AlgoTrail home">
+          <span class="brand-mark">A</span>
+          <span>AlgoTrail</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <button class="nav-item active" data-view="learn"><span>⌂</span> Learn</button>
+          <button class="nav-item" data-view="roadmap"><span>◇</span> Roadmap</button>
+          <button class="nav-item" data-view="practice"><span>⌁</span> Practice</button>
+        </nav>
+
+        <div class="sidebar-card">
+          <div class="mini-label">TODAY'S GOAL</div>
+          <div class="goal-row"><strong id="goalXp">0 / 50 XP</strong><span id="goalPercent">0%</span></div>
+          <div class="progress-track"><div id="goalBar" class="progress-fill"></div></div>
+          <p>Finish one lesson to keep your momentum.</p>
+        </div>
+
+        <button class="profile">
+          <span class="avatar">S</span>
+          <span><strong>DSA Explorer</strong><small>Level <span id="levelValue">1</span></small></span>
+          <span>•••</span>
+        </button>
+      </aside>
+
+      <main class="content">
+        <header class="topbar">
+          <div class="mobile-brand"><span class="brand-mark">A</span> AlgoTrail</div>
+          <div class="stats">
+            <span class="stat"><b>🔥</b><strong id="streakValue">1</strong><small>day streak</small></span>
+            <span class="stat"><b>◆</b><strong id="xpValue">0</strong><small>total XP</small></span>
+            <span class="stat hearts"><b>♥</b><strong id="heartsValue">5</strong></span>
+          </div>
+        </header>
+
+        <section id="learnView" class="view active">
+          <div class="topic-strip-wrap">
+            <span class="mini-label">CHOOSE A PATH</span>
+            <div id="topicStrip" class="topic-strip"></div>
+          </div>
+          <div class="hero">
+            <div>
+              <div id="pathEyebrow" class="eyebrow">LEARNING PATH 01</div>
+              <h1 id="pathTitle">Graph foundations</h1>
+              <p id="pathDescription"></p>
+              <div class="hero-progress"><span><b id="pathDone">0</b> of <b id="pathTotal">0</b> lessons complete</span><span id="pathPercent">0%</span></div>
+              <div class="progress-track"><div id="pathBar" class="progress-fill"></div></div>
+            </div>
+            <div id="heroIcon" class="hero-topic-icon" aria-hidden="true">G</div>
+          </div>
+
+          <div class="section-heading"><div><span class="mini-label">CURRENT CHAPTER</span><h2 id="chapterTitle">Start with the map</h2></div><span id="chapterTime" class="chapter-time">~35 min</span></div>
+          <div id="lessonPath" class="lesson-path"></div>
+
+          <div class="next-chapter">
+            <span class="chapter-icon">↗</span>
+            <div><span class="mini-label">KEEP EXPLORING</span><h3>Complete DSA roadmap</h3><p>See every pattern from arrays through dynamic programming.</p></div>
+            <button class="ghost-button" data-view-target="roadmap">View roadmap →</button>
+          </div>
+        </section>
+
+        <section id="roadmapView" class="view">
+          <div class="page-title"><span class="eyebrow">YOUR CURRICULUM</span><h1>The complete DSA journey</h1><p>Learn the core data structures and problem-solving patterns in a practical sequence.</p></div>
+          <div id="roadmapGrid" class="roadmap-grid"></div>
+        </section>
+
+        <section id="practiceView" class="view">
+          <div class="page-title"><span class="eyebrow">QUICK PRACTICE</span><h1>Strengthen weak concepts</h1><p>Short questions selected from lessons you have unlocked.</p></div>
+          <div class="practice-card">
+            <div class="practice-art">⌁</div>
+            <h2 id="practiceTitle">Graph foundations review</h2>
+            <p>Five quick questions. Earn 15 XP and reinforce your mental models.</p>
+            <button id="startPractice" class="primary-button">Start practice</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div id="lessonModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+      <div class="modal-panel">
+        <div class="lesson-top">
+          <button id="closeLesson" class="icon-button" aria-label="Close lesson">×</button>
+          <div class="lesson-progress"><div id="lessonProgressBar"></div></div>
+          <span class="modal-hearts">♥ <b id="modalHearts">5</b></span>
+        </div>
+        <div id="lessonContent" class="lesson-content"></div>
+        <div id="feedback" class="feedback" hidden></div>
+        <div class="lesson-actions">
+          <button id="lessonAction" class="primary-button">Continue</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

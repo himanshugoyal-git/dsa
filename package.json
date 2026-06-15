@@ -1,0 +1,16 @@
+{
+  "name": "algotrail-dsa",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "latest"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
