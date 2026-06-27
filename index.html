@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#17211b" />
-    <title>AlgoTrail - Learn DSA by Doing</title>
+    <title>AlgoTrail - Learn DSA & System Design by Doing</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -30,7 +30,7 @@
 
         <button class="profile">
           <span class="avatar">S</span>
-          <span><strong>DSA Explorer</strong><small>Level <span id="levelValue">1</span></small></span>
+          <span><strong>Learning Explorer</strong><small>Level <span id="levelValue">1</span></small></span>
           <span>•••</span>
         </button>
       </aside>
@@ -66,13 +66,13 @@
 
           <div class="next-chapter">
             <span class="chapter-icon">↗</span>
-            <div><span class="mini-label">KEEP EXPLORING</span><h3>Complete DSA roadmap</h3><p>See every pattern from arrays through dynamic programming.</p></div>
+            <div><span class="mini-label">KEEP EXPLORING</span><h3>Complete learning roadmap</h3><p>See every pattern from arrays through distributed system design.</p></div>
             <button class="ghost-button" data-view-target="roadmap">View roadmap →</button>
           </div>
         </section>
 
         <section id="roadmapView" class="view">
-          <div class="page-title"><span class="eyebrow">YOUR CURRICULUM</span><h1>The complete DSA journey</h1><p>Learn the core data structures and problem-solving patterns in a practical sequence.</p></div>
+          <div class="page-title"><span class="eyebrow">YOUR CURRICULUM</span><h1>DSA and System Design journey</h1><p>Learn core data structures, problem-solving patterns, and scalable product architecture in a practical sequence.</p></div>
           <div id="roadmapGrid" class="roadmap-grid"></div>
         </section>
 
@@ -81,7 +81,7 @@
           <div class="practice-card">
             <div class="practice-art">⌁</div>
             <h2 id="practiceTitle">Graph foundations review</h2>
-            <p>Five quick questions. Earn 15 XP and reinforce your mental models.</p>
+            <p id="practiceDescription">Up to 15 review questions. Earn 25 XP and reinforce your mental models.</p>
             <button id="startPractice" class="primary-button">Start practice</button>
           </div>
         </section>
@@ -98,6 +98,7 @@
         <div id="lessonContent" class="lesson-content"></div>
         <div id="feedback" class="feedback" hidden></div>
         <div class="lesson-actions">
+          <button id="lessonBack" class="ghost-button">Back</button>
           <button id="lessonAction" class="primary-button">Continue</button>
         </div>
       </div>
